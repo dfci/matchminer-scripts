@@ -29,6 +29,7 @@ AUTHOR
 import os
 import sys
 import yaml
+import time
 import requests
 import argparse
 import datetime as dt
@@ -69,7 +70,12 @@ def main(opts):
         # API request
         params = '?nct_id=%s' % nctid
         url = address + params
-        r = requests.get(url)
+
+        try:
+            r = requests.get(url)
+        except:
+            time.sleep(1)
+            r = requests.get(url)
 
         if r.status_code != 200 or 'trials' not in r.json():
             print '\n## WARNING: API request %s was unsuccessful. \n' \
