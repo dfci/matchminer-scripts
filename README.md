@@ -6,3 +6,7 @@ MatchMiner is currently in the progress of being completely made open source. As
 
 # links
 * (matchminer-engine)[https://github.com/dfci/matchminer-engine]
+
+# matchminer-scripts
+A collection of scripts which may be useful for deploying or utilizing MatchMiner.
+
